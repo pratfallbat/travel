@@ -1,6 +1,6 @@
 var gulp = require("gulp"),
-  svgSprite = require("gulp-svg-sprite");
-
+  svgSprite = require("gulp-svg-sprite"),
+  rename = require("gulp-rename");
 var config = {
   mode: {
     css: {
@@ -18,4 +18,11 @@ gulp.task("createSprite", function () {
     .src("./app/assets/images/icons/**/*.svg")
     .pipe(svgSprite(config))
     .pipe(gulp.dest("./app/temp/sprite/"));
+});
+
+gulp.task("copySpritesCSS", function () {
+  return gulp
+    .src("./app/temp/sprite/css/*.css")
+    .pipe(rename("_sprite.css"))
+    .pipe(gulp.dest("./app/assets/styles/modules"));
 });
