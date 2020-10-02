@@ -1077,10 +1077,16 @@ margin-bottom:1rem
     margin: 0.25rem 0 1rem 0;
   }
 
+/* do not edit modules/_sprite directly instead edit gulp/templates/sprite */
+
+.icon{
+    background-image: url('/assets/images/sprites/sprite-69f19c2e.svg');
+}
+
 .icon--clear-view-escapes{
     width: 142.4px ;
     height:59.53px;
-    background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg}');
+   
 
     background-position: 0 0;
 }
@@ -1088,7 +1094,7 @@ margin-bottom:1rem
 .icon--comment{
     width: 64px ;
     height:64px;
-    background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg}');
+   
 
     background-position: 99.70443349753694% 0;
 }
@@ -1096,7 +1102,7 @@ margin-bottom:1rem
 .icon--facebook{
     width: 21.23px ;
     height:42.01px;
-    background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg}');
+   
 
     background-position: 26.040607071652357% 45.795830448496034%;
 }
@@ -1104,7 +1110,7 @@ margin-bottom:1rem
 .icon--fire{
     width: 56px ;
     height:64px;
-    background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg}');
+   
 
     background-position: 0 99.56481481481481%;
 }
@@ -1112,7 +1118,7 @@ margin-bottom:1rem
 .icon--globe{
     width: 64px ;
     height:64px;
-    background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg}');
+   
 
     background-position: 27.586206896551722% 99.56481481481481%;
 }
@@ -1120,7 +1126,7 @@ margin-bottom:1rem
 .icon--instagram{
     width: 42.01px ;
     height:42.01px;
-    background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg}');
+   
 
     background-position: 63.2917018534157% 49.234556504346486%;
 }
@@ -1128,7 +1134,7 @@ margin-bottom:1rem
 .icon--mail{
     width: 64px ;
     height:48px;
-    background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg}');
+   
 
     background-position: 0 48.00806451612903%;
 }
@@ -1136,7 +1142,7 @@ margin-bottom:1rem
 .icon--rain{
     width: 64px ;
     height:64px;
-    background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg}');
+   
 
     background-position: 99.70443349753694% 59.25925925925926%;
 }
@@ -1144,7 +1150,7 @@ margin-bottom:1rem
 .icon--star{
     width: 64px ;
     height:64px;
-    background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg}');
+   
 
     background-position: 59.11330049261084% 99.56481481481481%;
 }
@@ -1152,7 +1158,7 @@ margin-bottom:1rem
 .icon--twitter{
     width: 51.78px ;
     height:42.06px;
-    background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg}');
+   
 
     background-position: 94.04330452560171% 98.50700323226104%;
 }
@@ -1160,7 +1166,7 @@ margin-bottom:1rem
 .icon--wifi{
     width: 60px ;
     height:64px;
-    background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg}');
+   
 
     background-position: 68.79227053140097% 0;
 }
@@ -1168,7 +1174,7 @@ margin-bottom:1rem
 .icon--youtube{
     width: 34.75px ;
     height:42px;
-    background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg}');
+   
 
     background-position: 36.69752421959096% 45.792307692307695%;
 }
