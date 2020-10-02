@@ -32,6 +32,14 @@ margin-bottom:1rem
   
   */
 
+  &--gutters-large {
+    margin-right: -100px;
+    /* margin-left: -65px; */
+  }
+  &--gutters-large > div {
+    padding-right: 100px;
+  }
+
   @media (min-width: 540px) {
     &__medium-4 {
       float: left;
@@ -61,6 +69,11 @@ margin-bottom:1rem
       clear: both;
       /* avoid as its empty element */
       /* div is commented as this was not optimal solutin */
+    }
+
+    &__medium-6 {
+      float: left;
+      width: 50%;
     }
   }
 }
