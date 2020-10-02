@@ -10,6 +10,9 @@
   strong {
     font-weight: 500;
   }
+  &__blue {
+    color: #2f5572;
+  }
 
   &__icon {
     display: block;
@@ -18,7 +21,9 @@
     margin-bottom: 0.6rem;
 
     @media (min-width: 540px) {
-      margin-right: 0.5rem;
+      position: relative;
+      top: 8px;
+      margin-right: 0.6rem;
       margin-left: 0;
       display: inline-block;
       margin-bottom: 0;

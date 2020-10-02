@@ -8,4 +8,9 @@
     color: #fff;
     background-color: rgb(65, 65, 111);
   }
+
+  &--testimonials {
+    background: url("testimonials-bg.jpg") top center no-repeat;
+    background-size: cover;
+  }
 }
