@@ -1,0 +1,52 @@
+.row {
+  /* background-color: yellow; */
+  /* &after is used as mixin */
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  &--gutters {
+    margin-right: -65px;
+    /* margin-left: -65px; */
+  }
+
+  &--gutters > div {
+    padding-right: 65px;
+    box-sizing: border-box;
+    /* this will not displace to div to new row although 66%+33++65px is larger */
+  }
+
+  @media (min-width: 540px) {
+    &__medium-4 {
+      float: left;
+      width: 33.33%;
+
+      /* 100%/12=8.33each grid is 8.3 */
+      /* 8.3*4 =33.33% */
+
+      /* when we float we take it out */
+      /* so main div have no idea how tall it is */
+    }
+
+    &__medium-4--larger {
+      width: 37%;
+    }
+
+    &__medium-8 {
+      float: left;
+      width: 66.66%;
+    }
+    &__medium-8--smaller {
+      width: 63%;
+    }
+
+    /* clear-me was used earlier  not anymore,in place of &after */
+    .clear-me {
+      clear: both;
+      /* avoid as its empty element */
+      /* div is commented as this was not optimal solutin */
+    }
+  }
+}
