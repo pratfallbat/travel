@@ -36,6 +36,17 @@ margin-bottom:1rem
   
   */
 
+  /* created last tp adjust changes */
+  &--gutter-small {
+    margin-right: -45px;
+  }
+
+  &--gutter-small > div {
+    padding-right: 45px;
+  }
+
+  /* created last tp adjust changes */
+
   &--gutters-large {
     margin-right: -100px;
     /* margin-left: -65px; */
@@ -78,6 +89,16 @@ margin-bottom:1rem
     &__medium-6 {
       float: left;
       width: 50%;
+    }
+  }
+
+  &--equal-height-at-medium {
+    @media (min-width: 540px) {
+      display: flex;
+    }
+    & > div {
+      float: none;
+      display: flex;
     }
   }
 }
