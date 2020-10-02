@@ -18,6 +18,20 @@
     /* this will not displace to div to new row although 66%+33++65px is larger */
   }
 
+  /* 1 */
+  @media (max-width: 540px) {
+    &__medium-4--larger {
+      margin-bottom: 1rem;
+    }
+  }
+  /* or 2 nd way*/
+  /* or insted of one we can have class here for mobile margin bottom and then same class in min-width 540px media query with no margin bottom 
+  &__b-margin-until-medium{
+margin-bottom:1rem  
+}
+  
+  */
+
   @media (min-width: 540px) {
     &__medium-4 {
       float: left;

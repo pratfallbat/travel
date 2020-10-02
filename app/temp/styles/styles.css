@@ -450,21 +450,6 @@ template {
   display: none;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  color: #333;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .large-hero {
   position: relative;
   border-bottom: 10px solid rgb(38, 38, 65);
@@ -595,6 +580,25 @@ img {
   }
     }
 
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  color: orange;
+}
+
 .wrapper {
   /* background-color: violet; */
   /* also uncomment yellow backgroundf on row.css */
@@ -700,6 +704,10 @@ img {
     margin-top: 0;
   }
 
+.row {
+  /* or 2 nd way*/
+}
+
 /* &after is used as mixin */
 
 .row::after {
@@ -721,6 +729,21 @@ img {
             box-sizing: border-box;
     /* this will not displace to div to new row although 66%+33++65px is larger */
   }
+
+/* 1 */
+
+@media (max-width: 540px) {
+    .row__medium-4--larger {
+      margin-bottom: 1rem;
+    }
+  }
+
+/* or insted of one we can have class here for mobile margin bottom and then same class in min-width 540px media query with no margin bottom 
+  &__b-margin-until-medium{
+margin-bottom:1rem  
+}
+  
+  */
 
 @media (min-width: 540px) {
 
@@ -755,4 +778,25 @@ img {
       /* avoid as its empty element */
       /* div is commented as this was not optimal solutin */
     }
+  }
+
+.generic-content-container p {
+    line-height: 1.65;
+
+    margin: 1.8rem 0;
+  }
+
+@media (min-width: 540px) {
+
+.generic-content-container p {
+      font-size: 1.125rem;
+      /* 18px/16=_rem */
+  }
+    }
+
+.generic-content-container p a {
+    font-weight: 700;
+    /* 400 is normal */
+    /* not all fonts need to be bold so we have written it here 
+    and thas y its not written global css scope*/
   }
