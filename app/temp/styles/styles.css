@@ -1263,12 +1263,39 @@ margin-bottom:1rem
 
 .site-header__menu-icon {
     width: 20px;
-    height: 20px;
-    background-color: white;
+    height: 19px;
+    /* background-color: white; */
     position: absolute;
     top: 10px;
     right: 10px;
   }
+
+.site-header__menu-icon__top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+    }
+
+.site-header__menu-icon__middle {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+    }
+
+.site-header__menu-icon__bottom {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+    }
 
 @media (min-width: 600px) {
 
@@ -1286,6 +1313,10 @@ margin-bottom:1rem
 .site-header__menu-content {
       display: block
   }
+    }
+
+.site-header__menu-content--is-visible {
+      display: block;
     }
 
 .primary-nav--pull-right {
