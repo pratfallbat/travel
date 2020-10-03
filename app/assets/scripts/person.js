@@ -1,10 +1,16 @@
-function Person(fname, fcolor) {
-  this.name = fname;
-  this.color = fcolor;
-  this.greet = function () {
-    console.log("Hlo" + this.name + "and " + this.color);
-  };
-}
-// console.log("hello from peron js");
+class Person {
+  constructor(fname, fcolor) {
+    this.name = fname;
+    this.color = fcolor;
+  }
+  // only in es6
 
-module.exports = Person;
+  greet() {
+    console.log(
+      "Hello: " + this.name + "   and your fav color is  " + this.color
+    );
+  }
+}
+
+// module.exports = Person; // es5 way
+export default Person;

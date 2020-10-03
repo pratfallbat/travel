@@ -67,48 +67,95 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// var $ = require("jquery");
+"use strict";
 
-var dummy = __webpack_require__(1);
-var person = __webpack_require__(2);
 
-alert("tests------------------ !");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-// console.log(person);
+var _person = __webpack_require__(1);
 
-var john = new person("John doe", "blue");
+var _person2 = _interopRequireDefault(_person);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // var $ = require("jquery");
+// var dummy = require("./dummy");
+
+// var person = require("./person");
+// now that o ur project supports es6
+
+
+var Adult = function (_Person) {
+  _inherits(Adult, _Person);
+
+  function Adult() {
+    _classCallCheck(this, Adult);
+
+    return _possibleConstructorReturn(this, (Adult.__proto__ || Object.getPrototypeOf(Adult)).apply(this, arguments));
+  }
+
+  _createClass(Adult, [{
+    key: "payTaxes",
+    value: function payTaxes() {
+      console.log(this.name + "now have paid taxes");
+    }
+  }]);
+
+  return Adult;
+}(_person2.default);
+
+var john = new _person2.default("John doe ", "blue");
 john.greet();
+var jane = new Adult("Jane smith ", "orange");
+jane.greet();
+jane.payTaxes();
 
 // dummy.funcexample();
 // console.log(dummy.examplefunc);
 // $("h1").remove();
 
-
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-exports.examplefunc = "yeay ...............";
-exports.funcexample = function () {
-  alert("yippieyaieykaiey madafucka");
-};
+"use strict";
 
 
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-function Person(fname, fcolor) {
-  this.name = fname;
-  this.color = fcolor;
-  this.greet = function () {
-    console.log("Hlo" + this.name + "and " + this.color);
-  };
-}
-// console.log("hello from peron js");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-module.exports = Person;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var Person = function () {
+  function Person(fname, fcolor) {
+    _classCallCheck(this, Person);
+
+    this.name = fname;
+    this.color = fcolor;
+  }
+  // only in es6
+
+  _createClass(Person, [{
+    key: "greet",
+    value: function greet() {
+      console.log("Hello: " + this.name + "   and your fav color is  " + this.color);
+    }
+  }]);
+
+  return Person;
+}();
+
+// module.exports = Person; // es5 way
+
+
+exports.default = Person;
 
 /***/ })
 /******/ ]);
