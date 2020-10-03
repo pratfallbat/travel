@@ -35,14 +35,22 @@
 
         <div class="site-header__menu-content">
           <div class="site-header__btn-container">
-            <a class="btn" href="#">Get in Touch</a>
+            <a class="btn open-modal" href="#">Get in Touch</a>
           </div>
 
           <nav class="primary-nav primary-nav--pull-right">
             <ul>
-              <li><a href="#our-beginning">Our Beginning</a></li>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
+              <li>
+                <a id="our-beginning-link" href="#our-beginning"
+                  >Our Beginning</a
+                >
+              </li>
+              <li><a id="our-features-link" href="#features">Features</a></li>
+              <li>
+                <a id="our-testimonials-link" href="#testimonials"
+                  >Testimonials</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
@@ -93,13 +101,19 @@
             We create soul restoring journeys that inspire you to be you.
           </p>
           <p>
-            <a class="btn btn--orange btn--large" href="#">Get Started Today</a>
+            <a class="btn btn--orange btn--large open-modal" href="#"
+              >Get Started Today</a
+            >
           </p>
         </div>
       </div>
     </div>
 
-    <div id="our-beginning" class="page-section">
+    <div
+      id="our-beginning"
+      class="page-section"
+      data-matching-link="#our-beginning-link"
+    >
       <div class="wrapper">
         <h2
           class="headline headline--centered headline--light headline--b-margin-small"
@@ -190,7 +204,11 @@
       </div>
     </div>
 
-    <div id="features" class="page-section page-section--blue">
+    <div
+      id="features"
+      class="page-section page-section--blue"
+      data-matching-link="#our-features-link"
+    >
       <div class="wrapper">
         <h2 class="section-title">
           <span class="icon icon--star section-title__icon"></span>Our
@@ -265,6 +283,7 @@
     <div
       id="testimonials"
       class="page-section page-section--no-b-padding-until-large page-section--testimonials"
+      data-matching-link="#our-testimonials-link"
     >
       <div class="wrapper wrapper--no-padding-until-large">
         <h2 class="section-title section-title__blue">
@@ -354,6 +373,40 @@
     </div>
     <script src="./temp/scripts/app.js"></script>
 
+    <div class="modal">
+      <div class="modal__inner">
+        <h2
+          class="section-title section-title__blue section-title__less-margin"
+        >
+          <span class="icon icon--mail section-title__icon"></span>Get in
+          <strong>Touch </strong>
+        </h2>
+        <div class="wrapper wrapper--narrow">
+          <p class="modal__description">
+            We will have an online order system in place soon .Until then,
+            connect with us on any of the platforms below
+          </p>
+        </div>
+
+        <div class="social-icons">
+          <a href="#" class="social-icons__icon">
+            <span class="icon icon--facebook section-title__icon"></span
+          ></a>
+          <a href="#" class="social-icons__icon">
+            <span class="icon icon--twitter section-title__icon"></span
+          ></a>
+          <a href="#" class="social-icons__icon">
+            <span class="icon icon--instagram section-title__icon"></span
+          ></a>
+          <a href="#" class="social-icons__icon">
+            <span class="icon icon--youtube section-title__icon"></span
+          ></a>
+        </div>
+      </div>
+
+      <div class="modal__close">X</div>
+    </div>
+
     <footer class="site-footer">
       <div class="wrapper">
         <p>
@@ -361,7 +414,7 @@
             Copyright &copy; 2016 Clear View Escapes. All rights reserved.</span
           >
 
-          <a class="btn btn--orange" href="#">Get in Touch</a>
+          <a class="btn btn--orange open-modal" href="#">Get in Touch</a>
         </p>
       </div>
     </footer>

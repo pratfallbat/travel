@@ -25,7 +25,13 @@
   }
 
   @media (min-width: 540px) {
+    position: fixed;
+    /* can be commneted to make it not fixed */
     background-color: rgba(47, 85, 114, 0.3);
+
+    &--dark {
+      background-color: rgba(23, 51, 72, 0.85);
+    }
   }
 
   &__btn-container {
@@ -40,11 +46,15 @@
 
     left: 50%;
     transform: translateX(-50%) scale(0.8);
+    transition: transform 0.3s ease-out;
     transform-origin: 50% 0;
 
-    @media (min-width: 800px) {
+    @media (min-width: 600px) {
       left: auto;
       tansform: translateX(0);
+      .site-header--dark & {
+        transform: scale(0.57);
+      }
     }
 
     background-color: rgb(38, 38, 148, 0.3);
