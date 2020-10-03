@@ -19,6 +19,7 @@
     />
 
     <link rel="stylesheet" href="temp/styles/styles.css" />
+    <script src="./temp/scripts/Vendor.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -129,7 +130,8 @@
         <div class="wrapper wrapper--medium wrapper--b-margin">
           <img
             sizes="(min-width: 970px) 976px, 100vw"
-            srcset="
+            class="lazyload"
+            data-srcset="
               assets/images/first-low.jpg          565w,
               assets/images/first-trip-i.jpg       976w,
               assets/images/first-trip-hi-dpi.jpg 1952w
@@ -143,7 +145,7 @@
             <picture>
               <source
                 sizes="404px"
-                srcset="
+                data-srcset="
                   assets/images/our-start-i.jpg        404w,
                   assets/images/our-start-hi-dpi-i.jpg 808w
                 "
@@ -151,14 +153,15 @@
               />
               <source
                 sizes="320px"
-                srcset="
+                data-srcset="
                   assets/images/our-start-portrait-i.jpg        382w,
                   assets/images/our-start-portrait-hi-dpi-i.jpg 764w
                 "
                 media="(min-width:800px)"
               />
               <img
-                srcset="
+                class="lazyload"
+                data-srcset="
                   assets/images/our-start-landscape.jpg         800w,
                   assets/images/our-start-landscape-hi-dpi.jpg 1600w
                 "
@@ -279,10 +282,10 @@
         </div>
       </div>
     </div>
-
+    <!-- backgroud image is lazyloaded below -->
     <div
       id="testimonials"
-      class="page-section page-section--no-b-padding-until-large page-section--testimonials"
+      class="page-section page-section--no-b-padding-until-large page-section--testimonials lazyload"
       data-matching-link="#our-testimonials-link"
     >
       <div class="wrapper wrapper--no-padding-until-large">
@@ -302,7 +305,8 @@
               <div class="testimonial__photo">
                 <img
                   sizes="160px"
-                  srcset="
+                  class="lazyload"
+                  data-srcset="
                     assets/images/testimonial-jane.jpg        160w,
                     assets/images/testimonial-jane-hi-dpi.jpg 320w
                   "
@@ -326,7 +330,8 @@
               <div class="testimonial__photo">
                 <img
                   sizes="160px"
-                  srcset="
+                  class="lazyload"
+                  data-srcset="
                     assets/images/testimonial-john.jpg        160w,
                     assets/images/testimonial-john-hi-dpi.jpg 320w
                   "
@@ -349,7 +354,8 @@
               <div class="testimonial__photo">
                 <img
                   sizes="160px"
-                  srcset="
+                  class="lazyload"
+                  data-srcset="
                     assets/images/testimonial-cat.jpg        160w,
                     assets/images/testimonial-cat-hi-dpi.jpg 320w
                   "
@@ -371,7 +377,6 @@
         </div>
       </div>
     </div>
-    <script src="./temp/scripts/app.js"></script>
 
     <div class="modal">
       <div class="modal__inner">
@@ -418,5 +423,6 @@
         </p>
       </div>
     </footer>
+    <script src="./temp/scripts/app.js"></script>
   </body>
 </html>

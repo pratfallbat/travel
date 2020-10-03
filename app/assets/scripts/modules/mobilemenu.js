@@ -17,13 +17,13 @@ class MobileMenu {
   events() {
     this.menuIcon.click(this.toggleTheMenu.bind(this));
     //   in  the context of click this is changed for toggleMenu
-    console.log("_+______________________");
-    console.log(this);
+    // console.log("_+______________________");
+    // console.log(this);
   }
   toggleTheMenu() {
     // this.remove(); will remove it from the page
-    console.log("_+______________________");
-    console.log(this);
+    // console.log("_+______________________");
+    // console.log(this);
     this.menuContent.toggleClass("site-header__menu-content--is-visible");
     this.siteHeader.toggleClass("site-header--is-expanded");
     this.menuIcon.toggleClass("site-header__menu-icon--close-x");

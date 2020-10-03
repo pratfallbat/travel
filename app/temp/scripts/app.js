@@ -11166,15 +11166,15 @@ var MobileMenu = function () {
     value: function events() {
       this.menuIcon.click(this.toggleTheMenu.bind(this));
       //   in  the context of click this is changed for toggleMenu
-      console.log("_+______________________");
-      console.log(this);
+      // console.log("_+______________________");
+      // console.log(this);
     }
   }, {
     key: "toggleTheMenu",
     value: function toggleTheMenu() {
       // this.remove(); will remove it from the page
-      console.log("_+______________________");
-      console.log(this);
+      // console.log("_+______________________");
+      // console.log(this);
       this.menuContent.toggleClass("site-header__menu-content--is-visible");
       this.siteHeader.toggleClass("site-header--is-expanded");
       this.menuIcon.toggleClass("site-header__menu-icon--close-x");
@@ -11282,6 +11282,7 @@ var StickyHeader = function () {
   function StickyHeader() {
     _classCallCheck(this, StickyHeader);
 
+    this.lazyImages = (0, _jquery2.default)(".lazyload");
     this.siteHeader = (0, _jquery2.default)(".site-header");
     this.headderTriggerElement = (0, _jquery2.default)(".large-hero__title");
     this.createHeaderWaypoints();
@@ -11290,12 +11291,21 @@ var StickyHeader = function () {
     this.headerLinks = (0, _jquery2.default)(".primary-nav a");
     this.createPageSectionWayPoints();
     this.addSmoothScroll();
+
+    this.refreshWaypoints();
   }
 
   _createClass(StickyHeader, [{
     key: "addSmoothScroll",
     value: function addSmoothScroll() {
       // this.headerLinks.smoothScrool();
+    }
+  }, {
+    key: "refreshWaypoints",
+    value: function refreshWaypoints() {
+      this.lazyImages.on("load", function () {
+        Waypoint.refreshAll();
+      });
     }
   }, {
     key: "createHeaderWaypoints",

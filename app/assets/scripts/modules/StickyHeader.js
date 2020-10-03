@@ -1,10 +1,11 @@
 import $ from "jquery";
-import waypounts from "../../../../node_modules/waypoints/lib/noframework.waypoints";
+import waypoints from "../../../../node_modules/waypoints/lib/noframework.waypoints";
 
 import smoothScrool from "jquery-smooth-scroll";
 
 class StickyHeader {
   constructor() {
+    this.lazyImages = $(".lazyload");
     this.siteHeader = $(".site-header");
     this.headderTriggerElement = $(".large-hero__title");
     this.createHeaderWaypoints();
@@ -13,10 +14,19 @@ class StickyHeader {
     this.headerLinks = $(".primary-nav a");
     this.createPageSectionWayPoints();
     this.addSmoothScroll();
+
+    this.refreshWaypoints();
   }
   addSmoothScroll() {
     // this.headerLinks.smoothScrool();
   }
+
+  refreshWaypoints() {
+    this.lazyImages.on("load", function () {
+      Waypoint.refreshAll();
+    });
+  }
+
   createHeaderWaypoints() {
     var that = this;
     new Waypoint({
